@@ -4,54 +4,19 @@
 
 @section('content')
 <div class="sfondo-azzurro main-products">
-<h2>LE LUNGHE</h2>
-    <div class="container">
-        @foreach ($paste as $pasta)
-            @if ($pasta['tipo'] == 'lunga')
-                
+    @foreach ($formati as $tipo => $formato)
+        <h2>{{ $tipo }} </h2>
+        <div class="container">
+            @foreach ($formato as $pasta)
                 <div class="card">
                     <img src="{{ $pasta['src'] }}" alt="">
-                    <div class="overlay">
-                        <p> {{ $pasta['titolo'] }}</p>
+                    <div class="overlay"> 
+                        <p> <a href=""> {{ $pasta['titolo'] }}</a></p>
                         <i class="fas fa-utensils"></i>
                     </div>
                 </div>
-            
-            @endif
-        @endforeach
-    </div>
-<h2>LE CORTE</h2>
-    <div class="container">
-        @foreach ($paste as $pasta)
-            @if ($pasta['tipo'] == 'corta')
-                
-                <div class="card">
-                    <img src="{{ $pasta['src'] }}" alt="">
-                    <div class="overlay">
-                        <p> {{ $pasta['titolo'] }}</p>
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                </div>
-            
-            @endif
-        @endforeach
-    </div>
-<h2>LE CORTISSIME</h2>
-    <div class="container">
-        @foreach ($paste as $pasta)
-            @if ($pasta['tipo'] == 'cortissima')
-                
-                <div class="card">
-                    <img src="{{ $pasta['src'] }}" alt="">
-                    <div class="overlay">
-                        <p> {{ $pasta['titolo'] }}</p>
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                </div>
-            
-            @endif
-        @endforeach
-    </div>
+            @endforeach
+        </div>
+    @endforeach
 </div>
 @endsection
-

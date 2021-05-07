@@ -6,8 +6,13 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 header {
     font-family: 'Teko', sans-serif;
     font-size: 30px;
@@ -95,3 +100,53 @@ header ul li a {
     visibility: visible;
 }
 
+footer {
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Teko';
+}
+footer img {
+    height: 20%;
+    width: auto;
+    
+}
+footer .middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 45%;
+}
+
+footer .middle div {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+footer .right {
+    width: 20%;
+}
+
+footer .middle li {
+    list-style: none;
+    font-size: 17px;
+    font-family: 'Open Sans';
+    font-weight: 100;
+}
+
+footer .middle h2 {
+    font-size: 30px;
+    color: #001942;
+}
+footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer .middle .last-column li{
+    font-size: 15px;
+}
+footer .middle .last-column li i {
+    font-size: 10px;
+    margin-right: 5px;
+}
